@@ -49,7 +49,7 @@ jobs:
         if: steps.build.outputs.skip != 'true'
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ steps.build.outputs.tag }}
+          tag_name: "${{ steps.build.outputs.tag }}"
           files: |
             geosite.db
             geosite.db.sha256sum
